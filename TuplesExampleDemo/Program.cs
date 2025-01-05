@@ -35,7 +35,7 @@ var validateAddressResult = ValidateAddress("123 sesame st");
 
 // We can use tuple structures by assigning independent variables as shown below.
 // This is called a Deconstructor structure, and it acts as a separator that splits our tuples into separate parts.
-(string message , bool valid) = ValidateAddress("123 sesame st");
+(string message, bool valid) = ValidateAddress("123 sesame st");
 
 
 // We can use any of the tuple values by assigning the relevant parameter to a variable and utilizing the data. In the example below, we only use the validMessage variable.
@@ -70,8 +70,20 @@ else
 #region Tumples Intro 3
 
 
-//
-// Another sample code will be written here
-//
+// We can create a tuple list and use it inside a loop.
+var students = new List<(string Name, int Age, double Grade)>
+{
+    ("Alex",18,3.2),
+    ("Ortega",21,2.2),
+    ("Carlos",30,3.8),
+    ("Lugano",27,3.9),
+
+};
+
+
+foreach (var student in students)
+{
+    Console.WriteLine($"Name: {student.Name} Age: {student.Age} Grade:{student.Grade}");
+}
 
 #endregion
